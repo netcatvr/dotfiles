@@ -23,3 +23,5 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias audiofix='exec /home/net/restart-audio.sh'
+eval "$(fzf --zsh)"
+alias ls="logo-ls"
