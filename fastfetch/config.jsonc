@@ -1,0 +1,136 @@
+// Load with --load-config examples/2.jsonc
+// Note that you must replace the image path to an existing image to display it.
+
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+      "source": "~/.config/fastfetch/img/logo.png",
+      "color": {
+        "1": "reset_white",
+        "2": "blue",
+        "3": "red",
+        "4": "38;2;150;150;150", // 38 - foreground colour, 2 - indicates RGB
+        "5": "38;2;100;100;100",
+        "6": "38;2;125;125;125",
+        "7": "38;2;110;110;110",
+        "8": "yellow"
+      },
+      "padding": {
+        //"top": 2
+      },
+      "type": "kitty-direct",
+      "width" : 32,
+      "height" : 16
+    },
+    "display": {
+        "separator": " -> "
+    },
+    "modules": [
+      {
+        "type": "title",
+        "format": "net@netbox",
+        "color": "red"
+      },
+        "separator",
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "yellow",
+            "format": "{2}"
+        },
+        {
+            "type": "os",
+            "key": "├{icon}", // Just get your distro's logo off nerdfonts.com
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": "├",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "└󰏖",
+            "keyColor": "yellow"
+        },
+        //{
+        //    "type": "shell",
+        //    "key": "└",
+        //    "keyColor": "yellow"
+        //},
+        "break",
+
+        {
+            "type": "wm",
+            "key": " DE/WM",
+            "keyColor": "blue"
+        },
+        {
+            "type": "lm",
+            "key": "├󰧨",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wmtheme",
+            "key": "├󰉼",
+            "keyColor": "blue"
+        },
+        {
+            "type": "terminal",
+            "key": "├",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wallpaper",
+            "key": "└󰸉",
+            "keyColor": "blue"
+        },
+
+        "break",
+        {
+            "type": "title",
+            "key": "󰌢 PC",
+	    "format" : "MSI Z690",
+            "keyColor": "green"
+        },
+        {
+            "type": "title",
+            "key": "├󰻠",
+            "format" : "12th Gen Intel(R) Core(TM) i9-12900K (8) @ 5.0GHz",
+            "keyColor": "green"
+        },
+        {
+            "type": "title",
+            "key": "├󰍛",
+            "format" : "NVIDIA GeForce RTX 4090",
+            "keyColor": "green"
+        },
+        {
+            "type": "disk",
+            "key": "├",
+            "keyColor": "green"
+        },
+        {
+            "type": "uptime",
+            "key": "└󰅐",
+            "keyColor": "green"
+        },
+
+        "break",
+        {
+            "type": "title",
+	    "format" : "Solid State Logic SSL 2",
+            "key": "  SOUND",
+            "keyColor": "cyan"
+        },
+
+        "break",
+        {
+          "type": "colors",
+          "symbol": "circle",
+          "block": {
+            "range": [1, 16]
+          }
+        }
+    ]
+}
